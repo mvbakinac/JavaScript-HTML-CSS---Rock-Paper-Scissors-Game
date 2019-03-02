@@ -21,6 +21,7 @@ header > h1 {
    text-align: center;
 }
 
+
 .score-board {
   
    position: relative;
@@ -91,4 +92,16 @@ header > h1 {
    text-align: center;
    font-weight: bold;
    font-size: 30px;
+}
+
+.green-border {
+   border: 3px solid green;
+}
+
+.red-border {
+   border: 3px solid red;
+}
+
+.blue-border {
+   border: 3px solid blue;
 }

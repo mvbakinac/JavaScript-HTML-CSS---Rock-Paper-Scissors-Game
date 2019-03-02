@@ -26,6 +26,9 @@ function win(userChoice, compChoice) {
    userScore_span.innerHTML = userScore;
    compScore_span.innerHTML = computerScore;
    result_div_p.innerHTML = firstLetterUpercase(userChoice) + smallUser + " beats " + firstLetterUpercase(compChoice) + smallComp + ".You win!"   
+   const choice = document.getElementById(userChoice);
+   choice.classList.add('green-border');
+   setTimeout(function(){ choice.classList.remove('green-border'); }, 500);
    console.log(userScore);
    console.log("User win");
 }
@@ -35,6 +38,9 @@ function loose(userChoice, compChoice) {
    userScore_span.innerHTML = userScore;
    compScore_span.innerHTML = computerScore;
    result_div_p.innerHTML = firstLetterUpercase(compChoice) + smallComp + " beats " + firstLetterUpercase(userChoice) + smallUser + ".You lose!"   
+   const choice = document.getElementById(userChoice);
+   choice.classList.add('red-border');
+   setTimeout(function(){ choice.classList.remove('red-border'); }, 500);
    console.log("User lose");
 }
 
@@ -42,6 +48,9 @@ function draw(userChoice, compChoice){
    userScore_span.innerHTML = userScore;
    compScore_span.innerHTML = computerScore;
    result_div_p.innerHTML = firstLetterUpercase(compChoice) + smallComp + " equals " + firstLetterUpercase(userChoice) + smallUser + ".Draw!"
+   const choice = document.getElementById(userChoice);
+   choice.classList.add('blue-border');
+   setTimeout(function(){ choice.classList.remove('blue-border'); }, 500);
  
   console.log("It is a draw");
 }
